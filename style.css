@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --hue: 159;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --title-fonts: 'Poppins', sans-serif;
+  --body-fonts: 'DM Sans', sans-serif;
+}
+
+/*************** BASE ****************/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 1rem var(--body-fonts);
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  display: flex;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
+  width: 100%;
+}
+
+#header.scroll {
+  /* background: var(--base-color); */
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+
+nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.logo {
+  font: 700 1.7rem var(--title-fonts);
+  color: var(--title-color);
+}
+.logo:hover {
+  color: var(--title-color);
+}
+.logo span {
+  color: var(--base-color);
+}
+.logo-alt span {
+  color: var(--body-color);
+}
+.container-menu {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+/*************** MAIN ****************/
+.principal {
+  margin-top: 120px;
+}
+.section-login {
+  border: 1px solid #dcdcdc;
+}
+
+.comunicado h3 {
+  margin-bottom: 15px;
+}
+.comunicado p {
+  margin-bottom: -10px;
+}
+
+.my-4 {
+  margin-top: 0.7rem !important;
+  margin-bottom: 0.7rem !important;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.title {
+  color: var(--title-color);
+  font: 500 1.1rem var(--title-fonts);
+}
+.title:hover {
+  color: #6ab99d;
+}
+
+@media (max-width: 992px) {
+  .comunicado h5 {
+    font-size: 14px;
+  }
+  .comunicado p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 15px;
+  }
+  .principal {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-menu {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
