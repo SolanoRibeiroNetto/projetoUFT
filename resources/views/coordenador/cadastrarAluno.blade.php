@@ -1,4 +1,6 @@
+@extends('templateCoordenador')
 
+@section('main')
 <main>
     <div class="container">
         <div class="row justify-content-center">
@@ -86,3 +88,4 @@
         </div>
     </div>
 </main>
+@endsection

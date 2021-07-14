@@ -1,3 +1,6 @@
+@extends('templateAluno')
+
+@section('main')
 <div style="margin: 30px">
     <div class="row">
         <div class="col-xl-6 col-md-6">
@@ -21,3 +24,4 @@
        
     </div>
 </div>
+@endsection

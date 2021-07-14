@@ -6,15 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Adm Aluno</title>
+        <title>Adm Coordenador</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="../aluno/assets/css/styles.css" rel="stylesheet" />
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+
+        <link href="{{ asset('css/novo/styles.css') }}" rel="stylesheet">
+
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Adm Aluno</a>
+            <a class="navbar-brand ps-3" href="index.html">Adm Coordenador</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -40,19 +43,27 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading"></div>
-                            <a class="nav-link" href="/aluno">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <a class="nav-link" href="/coordenador/">
+                                <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                                 Início
                             </a>
                             <div class="sb-sidenav-menu-heading">Ação</div>
                                                        
-                            <a class="nav-link" href="/aluno/enviar">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Enviar atividade
+                            <a class="nav-link" href="/coordenador/cadastrar">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
+                                Cadastrar Aluno
                             </a>
-                            <a class="nav-link" href="/aluno/ver">
+                            <a class="nav-link" href="/coordenador/alunos">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                Alunos Cadastrados
+                            </a>
+                            <a class="nav-link" href="/coordenador/aprovar">
+                                <div class="sb-nav-link-icon"><i class="fas fa-check"></i></div>
+                                Aprovar Atividade
+                            </a>
+                            <a class="nav-link" href="/coordenador/lista">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Ver atividades
+                                Lista de Atividades
                             </a>
                         </div>
                     </div>
@@ -63,7 +74,9 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <?php $this->load($view, $viewData); ?>
+                    
+                     @yield('main')
+
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
@@ -75,12 +88,17 @@
                 </footer>
             </div>
         </div>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="../aluno/assets/js/scripts.js"></script>
+
+        <script src="{{ asset('/js/scripts.js') }}" defer></script>
+       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="../aluno/assets/demo/chart-area-demo.js"></script>
-        <script src="../aluno/assets/demo/chart-bar-demo.js"></script>
+        <script src="{{ asset('/js/demo/chart-area-demo.js') }}" defer></script>
+        <script src="{{ asset('/js/demo/chart-bar-demo.js') }}" defer></script>
+
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="../aluno/assets/js/datatables-simple-demo.js"></script>
+        <script src="{{ asset('/js/datatables-simple-demo.js') }}" defer></script>
+        
     </body>
 </html>

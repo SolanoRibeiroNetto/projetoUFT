@@ -1,3 +1,6 @@
+@extends('templateAluno')
+
+@section('main')
 <div style="margin: 50px">
     <div class="card mb-4">
         <div class="card-header">
@@ -147,3 +150,4 @@
         </div>
     </div>
 <div>
+@endsection

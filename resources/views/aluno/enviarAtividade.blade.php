@@ -1,5 +1,7 @@
+@extends('templateAluno')
 
-                <main>
+@section('main')
+<main>
                     <div class="container cont-atividade">
                         <div class="row justify-content-center">
                             <div class="col-lg-11">
@@ -48,4 +50,4 @@
                         </div>
                     </div>
                 </main>
-            
+@endsection
