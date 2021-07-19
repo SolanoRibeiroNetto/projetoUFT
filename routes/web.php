@@ -35,3 +35,6 @@ Route::get('/coordenador', function () {
 Route::get('/coordenador/cadastro', function () {
     return view('coordenador/cadastrarAluno');
 });
+Route::get('/coordenador/alunos', function () {
+    return view('coordenador/AlunosCadastrados');
+});
