@@ -16,3 +16,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+/*************** ROTAS DO ALUNO ***************/
+Route::get('/aluno', function () {
+    return view('aluno/home');
+});
+Route::get('/aluno/enviar', function () {
+    return view('aluno/enviarAtividade');
+});
+Route::get('/aluno/ver', function () {
+    return view('aluno/verAtividade');
+});
+
+/*************** ROTAS DO COORDENADOR ***************/
+Route::get('/coordenador', function () {
+    return view('coordenador/home');
+});
+Route::get('/coordenador/cadastro', function () {
+    return view('coordenador/cadastrarAluno');
+});
+Route::get('/coordenador/alunos', function () {
+    return view('coordenador/AlunosCadastrados');
+});
