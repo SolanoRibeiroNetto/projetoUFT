@@ -5,23 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    {{-- <link rel="stylesheet" href="./style.css" /> --}}
-    
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
-    <script src="{{ asset('/js/app.js') }}" defer></script>
+    
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
       crossorigin="anonymous"
     ></script>
 
-    <title>Atividades complementares</title>
+    <title>Sistema integrado de Atividades complementares</title>
   </head>
   <body>
     <!--MENU-->
     <header id="header">
       <nav class="container-menu">
-        <a class="logo" href="#">Atividades<span>UFT</span>.</a>
+        <a class="logo" href="#">SIAC<span>UFT</span>.</a>
         <div class="menu">
           <ul class="grid">
             <li><a class="title" href="#login">Login</a></li>
