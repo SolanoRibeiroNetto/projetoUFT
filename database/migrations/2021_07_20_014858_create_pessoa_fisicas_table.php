@@ -19,6 +19,8 @@ class CreatePessoaFisicasTable extends Migration
             $table->string('cpf');
             $table->dateTime('data_nascimento');
             $table->string('sexo');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
