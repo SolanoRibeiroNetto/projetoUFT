@@ -7,7 +7,7 @@
             <div class="card bg-primary text-white mb-4">
                 <div class="card-body">Matricular Aluno</div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="/coordenador/cadastrar">Ver detalhes</a>
+                    <a class="small text-white stretched-link" href="/coordenador/cadastro">Ver detalhes</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>

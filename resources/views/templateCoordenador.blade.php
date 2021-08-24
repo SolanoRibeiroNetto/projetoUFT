@@ -17,7 +17,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Adm Coordenador</a>
+            <a class="navbar-brand ps-3" href="/coordenador">Adm Coordenador</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -49,7 +49,7 @@
                             </a>
                             <div class="sb-sidenav-menu-heading">Ação</div>
                                                        
-                            <a class="nav-link" href="/coordenador/cadastrar">
+                            <a class="nav-link" href="/coordenador/cadastro">
                                 <div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
                                 Cadastrar Aluno
                             </a>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Projeto DB</div>
+                        <div class="small">SIAC - UFT</div>
                     </div>
                 </nav>
             </div>
@@ -76,18 +76,17 @@
                 <main>
                     
                      @yield('main')
+                     
 
                 </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Atividade Complementar</div>
-                            
-                        </div>
-                    </div>
+                <footer class="py-4 bg-light mt-auto"> 
+                    <div class="text-muted" style="text-align: center">Copyright &copy; Atividade Complementar</div>    
                 </footer>
             </div>
+            
         </div>
+        
+        
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
