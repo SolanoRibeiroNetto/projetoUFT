@@ -15,9 +15,9 @@ class CreateTipoAtividadesTable extends Migration
     {
         Schema::create('tipo_atividades', function (Blueprint $table) {
             $table->id();
-            $table->string('codigo');
+            $table->string('codigo' , 12);
             $table->string('descricao');
-            $table->string('credito');
+            $table->integer('credito');
             $table->unsignedBigInteger('modalidade_id');
             $table->foreign('modalidade_id')->references('id')->on('modalidades')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();

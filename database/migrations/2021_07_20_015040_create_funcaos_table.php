@@ -15,8 +15,8 @@ class CreateFuncaosTable extends Migration
     {
         Schema::create('funcoes', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('codigo');
+            $table->string('nome', 25);
+            $table->string('codigo', 12);
             $table->timestamps();
         });
     }
