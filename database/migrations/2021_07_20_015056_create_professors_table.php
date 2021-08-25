@@ -15,7 +15,7 @@ class CreateProfessorsTable extends Migration
     {
         Schema::create('professores', function (Blueprint $table) {
             $table->id();
-            $table->string('matricula_docente');
+            $table->string('matricula_docente', 50);
             $table->unsignedBigInteger('pessoa_fisica_id');
             $table->foreign('pessoa_fisica_id')->references('id')->on('pessoa_fisicas')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();

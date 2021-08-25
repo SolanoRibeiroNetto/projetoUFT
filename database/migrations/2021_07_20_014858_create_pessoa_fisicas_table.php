@@ -16,9 +16,9 @@ class CreatePessoaFisicasTable extends Migration
         Schema::create('pessoa_fisicas', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('cpf');
+            $table->string('cpf', 14);
             $table->dateTime('data_nascimento');
-            $table->string('sexo');
+            $table->enum('sexo', ['MASCULINO', 'FEMININO']);
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();

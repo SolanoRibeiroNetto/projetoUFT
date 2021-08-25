@@ -20,11 +20,13 @@ class CreateAtividadeAlunosTable extends Migration
             $table->foreign('aluno_id')->references('id')->on('alunos')->onUpdate('cascade')->onDelete('cascade');
             $table->unsignedBigInteger('tipo_atividade_id');
             $table->foreign('tipo_atividade_id')->references('id')->on('tipo_atividades')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('quantidade_horas');
-            $table->string('horas_aprovadas')->nullable();
-            $table->string('status');
+            $table->string('quantidade_horas', 12);
+            $table->string('horas_aprovadas', 12)->nullable();
+            $table->enum('status', ['PENDENTE', 'APROVADO', 'RECUSADO'])->default('PENDENTE');
+            $table->string('observacao')->nullable();
             $table->string('anexo')->nullable();
             $table->timestamps();
+            
         });
     }
 
