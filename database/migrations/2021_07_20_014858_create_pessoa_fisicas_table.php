@@ -21,6 +21,7 @@ class CreatePessoaFisicasTable extends Migration
             $table->enum('sexo', ['MASCULINO', 'FEMININO']);
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

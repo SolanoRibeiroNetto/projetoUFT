@@ -6,60 +6,41 @@
         <div class="row justify-content-center">
             <div class="col-lg-11">
                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Novo aluno</h3></div>
+                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Nova Pessoa</h3></div>
                     <div class="card-body">
                         <form>
                             <div class="row mb-3">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="form-floating mb-3 mb-md-0">
-                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
-                                        <label for="inputFirstName">Nome</label>
+                                        <input class="form-control" id="nomeCompleto" type="text" placeholder="Nome completo"/>
+                                        <label for="nomeCompleto">Nome completo</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                        <label for="inputLastName">Sobrenome</label>
-                                    </div>
-                                </div>
+                                
                             </div>
                             <div class="row mb-3">
-                            <div class="col-md-3">
-                                    <div class="form-floating mb-3 mb-md-0">
-                                        <input class="form-control" id="inputFirstName" type="data" placeholder="Enter your last name" />
-                                        <label for="inputFirstName">CPF</label>
-                                    </div>
-                                </div>
                                 <div class="col-md-3">
                                     <div class="form-floating mb-3 mb-md-0">
-                                        <input class="form-control" id="inputFirstName" type="data" placeholder="Enter your last name" />
-                                        <label for="inputFirstName">Data de nascimento</label>
+                                        <input class="form-control" id="cpf" type="number" placeholder="CPF"/>
+                                        <label for="cpf">CPF</label>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
+                                    <div class="form-floating mb-3 mb-md-0">
+                                        <input class="form-control" id="dataNascimento" type="data" placeholder="Data da nescimento" />
+                                        <label for="dataNascimento">Data de nascimento</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
                                     <div class="form-floating">
-                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                        <label for="inputLastName">Cidade</label>
+                                        <input class="form-control" id="cidade" type="text" placeholder="Sexo" />
+                                        <label for="cidade">Sexo</label>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="form-floating">
-                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
-                                        <label for="inputLastName">UF</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
-                                        <label for="inputEmail">E-mail</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputEmail" type="text" placeholder="Enter your last name" />
-                                        <label for="inputEmail">Telefone</label>
+                                        <input class="form-control" id="email" type="email" placeholder="name@example.com" />
+                                        <label for="email">E-mail</label>
                                     </div>
                                 </div>
                             </div>
