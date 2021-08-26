@@ -13,6 +13,8 @@
 
         <link href="{{ asset('css/novo/styles.css') }}" rel="stylesheet">
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
+
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
