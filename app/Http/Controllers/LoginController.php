@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Aluno;
 use App\Models\funcoes_professores;
 use App\Models\PessoaFisica;
 use App\Models\Professor;
@@ -13,23 +14,27 @@ class LoginController extends Controller
 {
     public function logar(Request $request){
         
-        $user = User::where('email', $request->email)->where('password', $request->password)->first();
-
+        $user = PessoaFisica::where('email', $request->email)->where('password', $request->password)->first();
         if(!empty($user)){
 
-            $acesso = funcoes_professores::from('funcoes_professores as fp')
+            $acessoProfessor = funcoes_professores::from('funcoes_professores as fp')
             ->select('fp.*', 'f.nome as funcao')
             ->join('professores as p', 'p.id', 'fp.professor_id')
             ->join('pessoa_fisicas as pf', 'pf.id', 'p.pessoa_fisica_id')
             ->join('funcoes as f', 'f.id', 'fp.funcao_id')
-            ->where('pf.user_id', $user->id)->where('f.nome', 'COORDENADOR')->first();
+            ->where('pf.id', $user->id)->where('f.nome', 'COORDENADOR')->first();
 
-            if(!empty($acesso)){
+            if(!empty($acessoProfessor)){
                 return Redirect()->Route('coordenador.home');
             }
-                // $acesso = funcoes_professores::where('professor_id', $professor->id)->where(funcao)
-                //return view('aluno.')
-            //}
+            
+            $acessoAluno = Aluno::where('pessoa_fisica_id', $user->id)->first();
+
+            if(!empty($acessoAluno)){
+                return Redirect()->Route('aluno.home');
+            }
+
+            return Redirect()->back()->with('erro', 'usuario não possui acesso ao sistema.');
         }
     }
 }
