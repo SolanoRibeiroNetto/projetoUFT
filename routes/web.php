@@ -27,7 +27,7 @@ Route::post('/logar', 'App\Http\Controllers\LoginController@logar')->name('logar
 /*************** ROTAS DO ALUNO ***************/
 Route::get('/aluno', function () {
     return view('aluno/home');
-});
+})->name('aluno.home');
 Route::get('/aluno/enviar', function () {
     return view('aluno/enviarAtividade');
 });

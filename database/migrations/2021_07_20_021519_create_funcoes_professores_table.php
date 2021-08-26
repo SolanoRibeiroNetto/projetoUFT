@@ -22,6 +22,9 @@ class CreateFuncoesProfessoresTable extends Migration
             $table->unsignedBigInteger('professor_id');
             $table->foreign('professor_id')->references('id')->on('professores')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
+            $table->unsignedBigInteger('curso_id');
+            $table->foreign('curso_id')->references('id')->on('cursos')->onUpdate('cascade')->onDelete('cascade');
+            
         });
     }
 
