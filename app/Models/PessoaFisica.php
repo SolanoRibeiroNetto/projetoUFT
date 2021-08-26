@@ -13,3 +13,4 @@ class PessoaFisica extends Model
 
     protected $fillable = ['nome', 'cpf', 'data_nascimento', 'sexo'];
 }
+ 

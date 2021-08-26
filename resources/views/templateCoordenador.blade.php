@@ -30,8 +30,6 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Perfil</a></li>
-                        <li><hr class="dropdown-divider" /></li>
                         <li><a class="dropdown-item" href="/">Sair</a></li>
                     </ul>
                 </li>
@@ -48,19 +46,22 @@
                                 Início
                             </a>
                             <div class="sb-sidenav-menu-heading">Ação</div>
-                                                       
+                            <!--                          
                             <a class="nav-link" href="/coordenador/cadastro">
                                 <div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
                                 Cadastrar Aluno
                             </a>
+                            -->
                             <a class="nav-link" href="/coordenador/alunos">
                                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Alunos Cadastrados
                             </a>
+                            <!-- 
                             <a class="nav-link" href="/coordenador/aprovar">
                                 <div class="sb-nav-link-icon"><i class="fas fa-check"></i></div>
                                 Aprovar Atividade
                             </a>
+                             -->
                             <a class="nav-link" href="/coordenador/lista">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Lista de Atividades
