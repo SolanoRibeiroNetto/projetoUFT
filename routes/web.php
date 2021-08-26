@@ -48,5 +48,8 @@ Route::get('/coordenador/cadastro', function () {
 Route::get('/coordenador/alunos', function () {
     return view('coordenador/AlunosCadastrados');
 });
+Route::get('/coordenador/lista', function () {
+    return view('coordenador/listaAtividades');
+});
 
 Route::post('/coordenador/alunos/salvar', [AlunoController::class, 'store'])->name('coordenador.aluno.store');
