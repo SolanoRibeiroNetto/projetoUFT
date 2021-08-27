@@ -61,7 +61,7 @@
                             </div>
                             
                             <div class="mt-4 mb-0">
-                                <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Registar</a></div>
+                                <div class="d-grid"><a class="btn btn-primary btn-block" href="#">Registar</a></div>
                             </div>
                         </form>
                     </div>
