@@ -30,22 +30,32 @@
                                 </div>
                             </div>
                             <div class="row mb-4">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-floating">
                                         <input class="form-control" id="inputCidade" type="text" placeholder="Sexo" />
                                         <label for="inputCidade">Sexo</label>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-floating mb-3">
                                         <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
                                         <label for="inputEmail">E-mail</label>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-floating mb-3 mb-md-0">
                                         <input class="form-control" id="inputPassword" type="password" placeholder="Create a password" />
                                         <label for="inputPassword">Senha</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-floating mb-3 mb-md-0">
+                                        <label for="inputSelect"></label>
+                                        <select class="form-control" id="inputSelect"  style="padding-top: 5px">
+                                            <option selected disabled>Selecione uma opção</option>
+                                            <option value="1">Professor</option>
+                                            <option value="2">Aluno</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
