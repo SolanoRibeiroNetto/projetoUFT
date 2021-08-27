@@ -22,7 +22,7 @@ class CreatePessoaFisicasTable extends Migration
             $table->dateTime('data_nascimento');
             $table->enum('sexo', ['MASCULINO', 'FEMININO']);
             $table->timestamps();
-        });
+        }); 
     }
 
     /**

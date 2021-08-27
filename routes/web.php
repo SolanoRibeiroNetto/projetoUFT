@@ -23,6 +23,28 @@ Route::get('/', function () {
 Route::post('/logar', 'App\Http\Controllers\LoginController@logar')->name('logar');
 
 
+/*************** ROTAS DO ADM ***************/
+Route::get('/adm', function () {
+    return view('adm/home');
+});
+Route::get('/adm/pessoas', function () {
+    return view('adm/listaPessoas');
+});
+Route::get('/adm/pessoas/cadastro', function () {
+    return view('adm/cadastroPessoas');
+});
+Route::get('/adm/cursos', function () {
+    return view('adm/listaCursos');
+});
+Route::get('/adm/cursos/cadastro', function () {
+    return view('adm/cadastroCursos');
+});
+Route::get('/adm/funcoes', function () {
+    return view('adm/listaFuncoes');
+});
+Route::get('/adm/funcoes/cadastro', function () {
+    return view('adm/cadastroFuncoes');
+});
 
 /*************** ROTAS DO ALUNO ***************/
 Route::get('/aluno', function () {
@@ -38,10 +60,12 @@ Route::get('/aluno/ver', function () {
     return view('aluno/verAtividade');
 });
 
+
 /*************** ROTAS DO COORDENADOR ***************/
 Route::get('/coordenador', function () {
     return view('coordenador/home');
 })->name('coordenador.home');
+
 Route::get('/coordenador/cadastro', function () {
     return view('coordenador/cadastrarAluno');
 });
