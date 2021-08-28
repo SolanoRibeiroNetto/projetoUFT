@@ -27,7 +27,7 @@
                     @endphp
                     <tr>
                             <td>{{ $i }}</td>
-                            <td>{{ $funcoes->nome }}</td>
+                            <td>{{ $funcao->nome }}</td>
                             <td class="d-flex">
                                 {{-- <a class="mr-3 btn btn-sm btn-outline-success" href="{{ route('funcao.edit', ['id' => $funcao->id]) }}">Editar</a> --}}
                                 <form action="{{ route('funcao.delete', ['funcao' => $funcao->id]) }}" method="post">

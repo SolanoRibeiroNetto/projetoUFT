@@ -69,7 +69,7 @@ Route::get('/aluno', 'App\Http\Controllers\FuncaoController@index')->name('funco
 Route::get('/adm/funcoes/create', 'App\Http\Controllers\FuncaoController@create')->name('funcao.create');
 Route::post('/funcoes/store', 'App\Http\Controllers\FuncaoController@store')->name('funcao.store');
 Route::put('/funcoes/update/{id}', 'App\Http\Controllers\FuncaoController@update')->name('funcao.update');
-Route::delete('/funcoes/delete/{curso}', 'App\Http\Controllers\FuncaoController@destroy')->name('funcao.delete');
+Route::delete('/funcoes/delete/{funcao}', 'App\Http\Controllers\FuncaoController@destroy')->name('funcao.delete');
 Route::get('/funcoes/edit/{id}', 'App\Http\Controllers\FuncaoController@edit')->name('funcao.edit');
 
 Route::get('/aluno', function () {
