@@ -5,7 +5,9 @@
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Atividades Complementares
+            Minhas Atividades 
+            <div style="float: right;">Total de creditos 10/209</div>
+            
         </div>
         <div class="card-body">
             <table id="datatablesSimple">
@@ -156,7 +158,8 @@
                     </tr>
                     
                 </tbody>
-            </table>
+                
+            </table>            
         </div>
     </div>
 <div>
