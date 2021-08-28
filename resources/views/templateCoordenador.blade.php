@@ -54,7 +54,7 @@
                                 Cadastrar Aluno
                             </a>
                             -->
-                            <a class="nav-link" href="/coordenador/alunos">
+                            <a class="nav-link" href="{{ route('coordenador.alunos') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Alunos Cadastrados
                             </a>
@@ -64,7 +64,7 @@
                                 Aprovar Atividade
                             </a>
                              -->
-                            <a class="nav-link" href="/coordenador/lista">
+                            <a class="nav-link" href="{{ route('coordenador.atividades') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Lista de Atividades
                             </a>

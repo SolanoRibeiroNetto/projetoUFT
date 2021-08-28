@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Aluno;
+use App\Models\AtividadeAluno;
 use Illuminate\Http\Request;
 
 class ProfessorController extends Controller
@@ -80,5 +82,26 @@ class ProfessorController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function verAlunos()
+    {
+        $alunos = Aluno::all();
+        return view('coordenador/AlunosCadastrados', ['alunos' => $alunos]);
+    }
+
+    
+    public function verAtividade()
+    {
+        
+        $atividades = AtividadeAluno::all();
+
+        return view('coordenador/listaAtividades', ['atividades' => $atividades]);
     }
 }

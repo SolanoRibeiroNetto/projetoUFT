@@ -85,18 +85,10 @@ Route::get('/coordenador', function () {
     return view('coordenador/home');
 })->name('coordenador.home');
 
-Route::get('/coordenador/cadastro', function () {
-    return view('coordenador/cadastrarAluno');
-});
-Route::get('/coordenador/alunos', function () {
-    return view('coordenador/AlunosCadastrados');
-});
-Route::get('/coordenador/lista', function () {
-    return view('coordenador/listaAtividades');
-});
-
-Route::post('/coordenador/alunos/salvar', [AlunoController::class, 'store'])->name('coordenador.aluno.store');
-
+Route::get('/coordenador/alunos', 'App\Http\Controllers\ProfessorController@verAlunos')->name('coordenador.alunos');
+Route::get('/coordenador/lista', 'App\Http\Controllers\ProfessorController@verAtividade')->name('coordenador.atividades');
+Route::get('/coordenador/atividade/aprovar/{id}', 'App\Http\Controllers\AtividadesController@aprovar')->name('cordenador.atividade.aprovar');
+Route::get('/coordenador/atividade/recusar/{id}', 'App\Http\Controllers\AtividadesController@recusar')->name('cordenador.atividade.recusar');
 
 /*************** ROTAS DO ALUNO ***************/
 Route::get('/adm', function () {

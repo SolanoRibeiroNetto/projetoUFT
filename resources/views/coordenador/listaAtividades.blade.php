@@ -3,43 +3,38 @@
 @section('main')
 
 <div class="container container-lista">
-  <table class="table table-bordered">
-    <thead class="thead-light">
-      <tr>
-        <th scope="col">Aluno</th>
-        <th scope="col">Atividade</th>
-        <th scope="col">Data</th>
-        <th scope="col">Ação</th>
-      </tr>
+  <table class="table table-striped mt-4 datatablesSimple">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Modalidade</th>
+            <th>Creditos</th>
+            <th>Tipo</th>
+            <th>Status</th>
+        </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">Wanderson oliveira Bueno</th>
-        <td>II - Atividades de monitoria (por semestre)</td>
-        <td>25/08/2021</td>
-        <td>
-          <button type="button" class="btn btn-primary btn-sm">Aprovar</button>
-          <button type="button" class="btn btn-danger btn-sm">Recusar</button>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">Paulo</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>
-          <button type="button" class="btn btn-primary btn-sm">Aprovada</button>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">Pedro</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>
-        <button type="button" class="btn btn-danger btn-sm">Recusada</button>
-        </td>
-      </tr>
+        @php
+            $i = 0;
+        @endphp
+        @foreach($atividades as $atividade)
+        @php
+            $i++;
+        @endphp
+            <tr>
+                <td>{{ $i }}</td>
+                <td>{{ $atividade->tipo->modalidade->nome }}</td>
+                <td>{{ $atividade->tipo->credito }}</td>
+                <td>{{ $atividade->tipo->descricao }}</td>
+                <td>{{ $atividade->status }}</td>
+                <td>
+                  <a href="{{ route('cordenador.atividade.aprovar', ['id' => $atividade->id]) }}" class="btn btn-primary btn-sm">Aprovar</a>
+                  <a href="{{ route('cordenador.atividade.recusar', ['id' => $atividade->id]) }}" class="btn btn-danger btn-sm">Recusar</a>
+                </td>
+            </tr>
+        @endforeach
     </tbody>
-  </table>
+</table>
 </div>
 
 

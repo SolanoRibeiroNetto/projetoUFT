@@ -48,11 +48,39 @@ class AtividadesController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        $atividade = AtividadeAluno::where('id', $id)->first();
+
+        $atividade->status = $request->status;
+
+        $atividade->save();
+
+            return redirect()->route('coordenador.atividades')->with('status', 'Cursos cadastrado com Sucesso!');
     }
 
     public function destroy($id)
     {
         //
+    }
+
+    public function recusar($id)
+    {
+        $atividade = AtividadeAluno::where('id', $id)->first();
+
+        $atividade->status = 'RECUSADO';
+
+        $atividade->save();
+
+        return redirect()->route('coordenador.atividades')->with('status', 'Cursos cadastrado com Sucesso!');
+    }
+
+    public function aprovar($id)
+    {
+        $atividade = AtividadeAluno::where('id', $id)->first();
+
+        $atividade->status = 'APROVADO';
+
+        $atividade->save();
+
+        return redirect()->route('coordenador.atividades')->with('status', 'Cursos cadastrado com Sucesso!');
     }
 }
