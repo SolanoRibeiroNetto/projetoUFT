@@ -6,44 +6,38 @@
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
             Lista de Funções
-            <a href="/adm/funcoes/cadastro"><button type="button" class="btn btn-primary btn-sm" style="float: right;">Novo registro</button></a>
+            <a class="btn btn-primary btn-sm" style="float: right;" href="{{ route('funcao.create') }}">Novo registro</a>
         </div>
         <div class="card-body">
-            <table id="datatablesSimple">
+            <table class="table table-striped mt-4 datatablesSimple">
                 <thead>
                     <tr>
-                        <th width="80%">Nome da função</th>
-                        <th>Ação</th>
+                        <th>#</th>
+                        <th>Função</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
-                <tfoot>
-                    <tr>
-                         <th>Nome da função</th>
-                         <th>Ação</th>
-                    </tr>
-                </tfoot>
                 <tbody>
+                    @php
+                        $i = 0;
+                    @endphp
+                    @foreach($funcoes as $funcao)
+                    @php
+                        $i++;
+                    @endphp
                     <tr>
-                        <td>Coordenador</td> 
-                        <td>
-                            <button type="button" class="btn btn-outline-primary btn-sm">Editar</button> 
-                            <button type="button" class="btn btn-outline-danger btn-sm">Excluir</button>
-                        </td>                     
-                    </tr>
-                    <tr>
-                        <td>Diretor</td>
-                        <td>
-                            <button type="button" class="btn btn-outline-primary btn-sm">Editar</button> 
-                            <button type="button" class="btn btn-outline-danger btn-sm">Excluir</button>
-                        </td>
-                    </tr>  
-                    <tr>
-                        <td>Secretário</td>
-                        <td>
-                            <button type="button" class="btn btn-outline-primary btn-sm">Editar</button> 
-                            <button type="button" class="btn btn-outline-danger btn-sm">Excluir</button>
-                        </td>
-                    </tr>                 
+                            <td>{{ $i }}</td>
+                            <td>{{ $funcoes->nome }}</td>
+                            <td class="d-flex">
+                                {{-- <a class="mr-3 btn btn-sm btn-outline-success" href="{{ route('funcao.edit', ['id' => $funcao->id]) }}">Editar</a> --}}
+                                <form action="{{ route('funcao.delete', ['funcao' => $funcao->id]) }}" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <input class="btn btn-sm btn-outline-danger" type="submit" value="Remover">
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach             
                 </tbody>
             </table>
         </div>

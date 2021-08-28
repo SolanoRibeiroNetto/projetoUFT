@@ -33,25 +33,33 @@ Route::get('/adm/pessoas', function () {
 Route::get('/adm/pessoas/cadastro', function () {
     return view('adm/cadastroPessoas');
 });
-
-//rotas de cursos
-
-Route::get('/cursos', 'App\Http\Controllers\CursoController@index')->name('cursos.index');
-Route::get('/curso/create', 'App\Http\Controllers\CursoController@create')->name('curso.create');
-Route::post('/curso/store', 'App\Http\Controllers\CursoController@store')->name('curso.store');
-Route::put('/curso/update/{id}', 'App\Http\Controllers\CursoController@update')->name('curso.update');
-Route::delete('/curso/delete/{curso}', 'App\Http\Controllers\CursoController@destroy')->name('curso.delete');
-Route::get('/curso/edit/{id}', 'App\Http\Controllers\CursoController@edit')->name('curso.edit');
-
-
-
-
 Route::get('/adm/funcoes', function () {
     return view('adm/listaFuncoes');
 });
 Route::get('/adm/funcoes/cadastro', function () {
     return view('adm/cadastroFuncoes');
 });
+
+//rotas de cursos
+
+Route::get('/adm/cursos', 'App\Http\Controllers\CursoController@index')->name('cursos.index');
+Route::get('/adm/curso/create', 'App\Http\Controllers\CursoController@create')->name('curso.create');
+Route::post('/curso/store', 'App\Http\Controllers\CursoController@store')->name('curso.store');
+Route::put('/curso/update/{id}', 'App\Http\Controllers\CursoController@update')->name('curso.update');
+Route::delete('/curso/delete/{curso}', 'App\Http\Controllers\CursoController@destroy')->name('curso.delete');
+Route::get('/curso/edit/{id}', 'App\Http\Controllers\CursoController@edit')->name('curso.edit');
+
+//rota de Funções
+Route::get('/adm/funcoes', 'App\Http\Controllers\FuncaoController@index')->name('funcoes.index');
+Route::get('/adm/funcoes/create', 'App\Http\Controllers\FuncaoController@create')->name('funcao.create');
+Route::post('/funcoes/store', 'App\Http\Controllers\FuncaoController@store')->name('funcao.store');
+Route::put('/funcoes/update/{id}', 'App\Http\Controllers\FuncaoController@update')->name('funcao.update');
+Route::delete('/funcoes/delete/{curso}', 'App\Http\Controllers\FuncaoController@destroy')->name('funcao.delete');
+Route::get('/funcoes/edit/{id}', 'App\Http\Controllers\FuncaoController@edit')->name('funcao.edit');
+
+
+
+
 
 /*************** ROTAS DO ALUNO ***************/
 Route::get('/aluno', function () {
