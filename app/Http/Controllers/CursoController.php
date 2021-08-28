@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class CursoController extends Controller
 {
-    public function index()
+    public function index() 
     {
         $cursos = Cursos::all();
         return view('adm/listaCursos', ['cursos' => $cursos]);
