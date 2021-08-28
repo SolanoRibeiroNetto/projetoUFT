@@ -18,6 +18,7 @@ class LoginController extends Controller
         if(!empty($user)){
 
             if($user->nome == "admin"){
+                session()->put('User', $user);
                 return Redirect()->Route('adm.home');
             }
 
@@ -29,12 +30,14 @@ class LoginController extends Controller
             ->where('pf.id', $user->id)->where('f.nome', 'COORDENADOR')->first();
 
             if(!empty($acessoProfessor)){
+                session()->put('User', $user);
                 return Redirect()->Route('coordenador.home');
             }
             
             $acessoAluno = Aluno::where('pessoa_fisica_id', $user->id)->first();
 
             if(!empty($acessoAluno)){
+                session()->put('User', $user);
                 return Redirect()->Route('aluno.home');
             }
 

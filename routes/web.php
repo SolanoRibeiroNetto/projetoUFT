@@ -62,19 +62,23 @@ Route::get('/funcoes/edit/{id}', 'App\Http\Controllers\FuncaoController@edit')->
 
 
 /*************** ROTAS DO ALUNO ***************/
+
+
+//rota de Funções
+Route::get('/aluno', 'App\Http\Controllers\FuncaoController@index')->name('funcoes.index');
+Route::get('/adm/funcoes/create', 'App\Http\Controllers\FuncaoController@create')->name('funcao.create');
+Route::post('/funcoes/store', 'App\Http\Controllers\FuncaoController@store')->name('funcao.store');
+Route::put('/funcoes/update/{id}', 'App\Http\Controllers\FuncaoController@update')->name('funcao.update');
+Route::delete('/funcoes/delete/{curso}', 'App\Http\Controllers\FuncaoController@destroy')->name('funcao.delete');
+Route::get('/funcoes/edit/{id}', 'App\Http\Controllers\FuncaoController@edit')->name('funcao.edit');
+
 Route::get('/aluno', function () {
     return view('aluno/home');
 })->name('aluno.home');
-Route::get('/aluno/enviar', function () {
-    return view('aluno/enviarAtividade');
-});
 
-Route::post('/aluno/atividade/salvar', [AtividadesController::class, 'store'])->name('aluno.atividade.store');
-
-Route::get('/aluno/ver', function () {
-    return view('aluno/verAtividade');
-});
-
+Route::get('/aluno/atividades/enviar', 'App\Http\Controllers\AlunoController@novaAtividade')->name('aluno.atividade.enviar');
+Route::get('/aluno/atividades', 'App\Http\Controllers\AlunoController@verAtividade')->name('aluno.atividades');
+Route::post('/aluno/atividade/salvar', 'App\Http\Controllers\AtividadesController@store')->name('atividade.store');
 
 /*************** ROTAS DO COORDENADOR ***************/
 Route::get('/coordenador', function () {

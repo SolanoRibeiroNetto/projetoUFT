@@ -41,17 +41,17 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading"></div>
-                            <a class="nav-link" href="/aluno">
+                            <a class="nav-link" href="{{ route('aluno.home') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Início
                             </a>
                             <div class="sb-sidenav-menu-heading">Ação</div>
                                                        
-                            <a class="nav-link" href="/aluno/enviar">
+                            <a class="nav-link" href="{{ route('aluno.atividade.enviar') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Enviar atividade
                             </a>
-                            <a class="nav-link" href="/aluno/ver">
+                            <a class="nav-link" href="{{ route('aluno.atividades') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Ver atividades
                             </a>

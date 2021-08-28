@@ -12,4 +12,9 @@ class TipoAtividade extends Model
     protected $table = 'tipo_atividades';
 
     protected $fillable = ['codigo', 'credito', 'modalidade_id', 'descricao'];
+
+    public function modalidade()
+    {
+        return $this->hasOne(Modalidade::class, 'id', 'modalidade_id');
+    }
 }
