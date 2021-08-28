@@ -17,6 +17,10 @@ class LoginController extends Controller
         $user = PessoaFisica::where('email', $request->email)->where('password', $request->password)->first();
         if(!empty($user)){
 
+            if($user->nome == "admin"){
+                return Redirect()->Route('adm.home');
+            }
+
             $acessoProfessor = funcoes_professores::from('funcoes_professores as fp')
             ->select('fp.*', 'f.nome as funcao')
             ->join('professores as p', 'p.id', 'fp.professor_id')

@@ -33,12 +33,19 @@ Route::get('/adm/pessoas', function () {
 Route::get('/adm/pessoas/cadastro', function () {
     return view('adm/cadastroPessoas');
 });
-Route::get('/adm/cursos', function () {
-    return view('adm/listaCursos');
-});
-Route::get('/adm/cursos/cadastro', function () {
-    return view('adm/cadastroCursos');
-});
+
+//rotas de cursos
+
+Route::get('/cursos', 'App\Http\Controllers\CursoController@index')->name('cursos.index');
+Route::get('/curso/create', 'App\Http\Controllers\CursoController@create')->name('curso.create');
+Route::post('/curso/store', 'App\Http\Controllers\CursoController@store')->name('curso.store');
+Route::put('/curso/update/{id}', 'App\Http\Controllers\CursoController@update')->name('curso.update');
+Route::delete('/curso/delete/{curso}', 'App\Http\Controllers\CursoController@destroy')->name('curso.delete');
+Route::get('/curso/edit/{id}', 'App\Http\Controllers\CursoController@edit')->name('curso.edit');
+
+
+
+
 Route::get('/adm/funcoes', function () {
     return view('adm/listaFuncoes');
 });
@@ -77,3 +84,9 @@ Route::get('/coordenador/lista', function () {
 });
 
 Route::post('/coordenador/alunos/salvar', [AlunoController::class, 'store'])->name('coordenador.aluno.store');
+
+
+/*************** ROTAS DO ALUNO ***************/
+Route::get('/adm', function () {
+    return view('adm.home');
+})->name('adm.home');
