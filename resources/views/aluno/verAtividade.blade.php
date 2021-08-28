@@ -5,7 +5,9 @@
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Atividades Complementares
+            Minhas Atividades 
+            <div style="float: right;">Total de creditos 10/209</div>
+            
         </div>
         <div class="card-body">
             <table id="datatablesSimple">
@@ -14,6 +16,7 @@
                         <th>Modalidade</th>
                         <th>Tipo</th>
                         <th>Creditos</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -21,6 +24,7 @@
                         <th>Modalidade</th>
                         <th>Tipo</th>
                         <th>Creditos</th>
+                        <th>Status</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -28,25 +32,33 @@
                         <td>Ensino</td>
                         <td>II - Atividades de monitoria (por semestre)</td>
                         <td>5</td>
-                        
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Aprovada</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Pesquisa</td>
                         <td>I – Livro Publicado;</td>
                         <td>50</td>
-                        
+                        <td>
+                            <button type="button" class="btn btn-secondary btn-sm">Pendente</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Extensão</td>
                         <td>I – Autoria e execução de projetos; </td>
                         <td>15</td>
-                        
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Aprovada</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Cedric Kelly</td>
                         <td>Senior Javascript Developer</td>
                         <td>Edinburgh</td>
-                        
+                        <td>
+                            <button type="button" class="btn btn-danger btn-sm">Recusada</button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Airi Satou</td>
@@ -146,7 +158,8 @@
                     </tr>
                     
                 </tbody>
-            </table>
+                
+            </table>            
         </div>
     </div>
 <div>

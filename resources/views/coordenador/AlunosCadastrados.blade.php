@@ -12,22 +12,22 @@
                 <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>Horas</th>
-                        <th>Ação</th>
+                        <th>E-mail</th>
+                        <th>Matricula</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
                         <th>Nome</th>
-                        <th>Horas</th>
-                        <th>Ação</th>
+                        <th>E-mail</th>
+                        <th>Matricula</th>
                     </tr>
                 </tfoot>
                 <tbody>
                     <tr>
                         <td>Wanderson Bueno</td>
-                        <td>II - Atividades de monitoria (por semestre)</td>
-                        <td>5</td>
+                        <td>wanderson@mail</td>
+                        <td>2145789455</td>
                         
                     </tr>
                     <tr>
